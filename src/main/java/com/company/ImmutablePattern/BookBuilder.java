@@ -6,6 +6,12 @@ public class BookBuilder {
     private  String author;
     private    int publishing_year;
     private   String descriptinon;
+    private Ganre ganre;
+
+    public BookBuilder setGanre(Ganre ganre) {
+        this.ganre = ganre;
+        return this;
+    }
 
     public BookBuilder setCode(String code) {
         this.code = code;
@@ -33,7 +39,7 @@ public class BookBuilder {
     }
 
     public Books build() {
-        return new Books(code,title,author,publishing_year,descriptinon);
+        return new Books(code,title,author,publishing_year,descriptinon,ganre);
     }
 
 
